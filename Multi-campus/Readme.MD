@@ -11,13 +11,13 @@
 
 3. Contract 폴더 생성
 
-  a. 폴더 생성
+폴더 생성
 - mkdir contract
 
-  b. 폴더 확인
+폴더 확인
 - ls
 
-  c. 폴더 경로
+폴더 경로
 - pwd
 
 4. Visual Code 설치
