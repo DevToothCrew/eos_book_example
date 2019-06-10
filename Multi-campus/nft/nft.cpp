@@ -23,17 +23,20 @@ void nft::create(name issuer, std::string sym)
 
 void nft::issue()
 {
+    // transfer로 들어온 정보 데이터를 사용하기 위해 잘라냄. memo에 있는 내용둘이 tokens에 배열로 저장됨.
     auto transfer_data = eosio::unpack_action_data<nft_transfer>();
     std::vector<std::string> tokens;
     tokenize(transfer_data.memo, tokens, ":");
 
     auto to = transfer_data.from;
     std::string sym = tokens[0];
+    // 숫자 데이터로 문자로 들어오기 떄문에 형 변환을 해줘야 함
     const char *tid_char = tokens[1].c_str();
     uint64_t index = std::atoi(tid_char);
 
     eosio_assert(is_account(to), "to account does not exist");
 
+    // 화이트 리스트에 존재하는 유저인지 체크
     usercheck(to);
 
     // sym change to symbol type
@@ -59,15 +62,17 @@ void nft::issue()
     if (symbols == symbol("UTS", 0))
     {
         type = "servant";
-
+        // 게임 컨트랙트에 있는 정보를 불러옴
         servant_table servant(GAME_CONTRACT, to.value);
         auto servant_iter = servant.get(index, "Not exist Servant");
 
+        // 장비를 착용 하고 있는지 체크
         for (uint8_t i = 0; i < 3; i++)
         {
             eosio_assert(servant_iter.servant.equip_slot[i] == 0, "The servant is wearing the item.");
         }
 
+        // 세컨더리 키(master)로 테이블을 검색하여, 중복된 토큰 데이터가 존재하는지 확인
         auto uts_list = stokens.get_index<"bymaster"_n>();
         auto ute_list_bymaster = uts_list.lower_bound(to.value);
         bool not_exist = true;
@@ -96,6 +101,7 @@ void nft::issue()
 
     add_balance(to, quantity, _self);
 
+    // 인라인 액션으로 게임 컨트랙트에 있는 changetoken 액션을 실행. 권한이 필요하다. eosio.code 권한 설정 필요.
     action(permission_level{get_self(), "active"_n},
            GAME_CONTRACT, "changetoken"_n,
            std::make_tuple(to, type, index))

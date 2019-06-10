@@ -16,6 +16,7 @@ CONTRACT nft : public contract
   public:
     nft(name _self, name _code, datastream<const char *> ds) : contract(_self, _code, ds), stokens(_self, _self.value){}
 
+    // eosio.token 에서 transfer 받은 정보를 담기 위한 구조체
     struct nft_transfer
     {
         eosio::name from;
