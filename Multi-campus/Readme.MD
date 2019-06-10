@@ -8,3 +8,20 @@
 - wget https://github.com/EOSIO/eosio.cdt/releases/download/v1.6.1/eosio.cdt_1.6.1-1_amd64.deb
 
 - sudo apt install ./eosio.cdt_1.6.1-1_amd64.deb
+
+3. Contract 폴더 생성
+
+폴더 생성
+- mkdir contract
+
+폴더 확인
+- ls
+
+폴더 경로
+- pwd
+
+4. Visual Code 설치
+
+5. 경로 확인
+
+- C:\Users\student\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home
