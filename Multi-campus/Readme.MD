@@ -79,6 +79,11 @@
 
 16. 계정 생성
 
+- * EOSIO Key 임포트
+
+- Public : EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+- Private : 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+
 - 키 생성 -> 키 임포트
 
 - cleos create account eosio [계정명] [퍼블릭키] [퍼블릭키]
