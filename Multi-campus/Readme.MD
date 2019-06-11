@@ -100,3 +100,7 @@
 - cleos push action eosio setprods "{ \"schedule\": [{\"producer_name\": \"[계정명]\",\"block_signing_key\": \"[]\"}]}" -p eosio@active
 
 20. 노드 
+
+21. 심화
+
+ - https://developers.eos.io/eosio-nodeos/docs/local-multi-node-testnet
