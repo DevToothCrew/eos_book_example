@@ -91,7 +91,7 @@
 
 17. 터미널(4)에서 노드 실행
 
-- nodeos --enable-stale-production --producer-name [계정명] --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin --http-server-address 127.0.0.1:8889 --p2p-listen-endpoint 127.0.0.1:9877 --p2p-peer-address 127.0.0.1:9876 --config-dir node2 --data-dir node2 --signature-provider =  [퍼블릭키]=KEY:[프라이빗키]
+- nodeos --enable-stale-production --producer-name [계정명] --plugin eosio::chain_api_plugin --plugin eosio::net_api_plugin --http-server-address 127.0.0.1:8888 --p2p-listen-endpoint 127.0.0.1:9877 --p2p-peer-address 127.0.0.1:9876 --config-dir node2 --data-dir node2 --signature-provider =  [퍼블릭키]=KEY:[프라이빗키]
 
 18. 노드 실패 확인
 
