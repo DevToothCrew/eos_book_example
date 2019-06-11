@@ -75,6 +75,7 @@
 
 - cd eosio.contracts/contracts/eosio.bios/build
 
+- cleos set contract [계정이름] [배포경로] [.wasm 파일 경로] [.abi 파일 경로]
 - cleos set contract eosio eosio.bios --abi eosio.bios.abi
 
 16. 계정 생성
