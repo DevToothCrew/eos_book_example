@@ -25,3 +25,7 @@
 13. eosio-cpp -o baseball.wasm baseball.cpp -abigen 로 빌드. -o 옵션은 output의 약자로 baseball.cpp 파일로 baseball.wasm 결과물을 생성하겠다라는 뜻. -abigen 옵션으로 baseball.abi 생성. 
 
 14. cleos set contract 계정명 경로 명령어로 배포 (ex. cleos set contract devtooth ../baseball)
+
+15. 폴더 경로
+
+- C:\Users\[student]\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\soolmini
