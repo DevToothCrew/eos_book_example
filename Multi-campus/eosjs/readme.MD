@@ -15,4 +15,4 @@ EOSJS 환경구성
 
 4. create-react-app 설치
 
-- npm install -g create-react-app
+- sudo npm install -g create-react-app
