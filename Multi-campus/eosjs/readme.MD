@@ -34,3 +34,6 @@ EOSJS 환경구성
 8. Scatter 세팅
 
 - npm i -D @babel/runtime
+
+- NPM EOSJS 16.0.9
+https://www.npmjs.com/package/eosjs/v/16.0.9
