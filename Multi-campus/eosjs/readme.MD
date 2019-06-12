@@ -30,3 +30,7 @@ EOSJS 환경구성
 - npm i -S scatterjs-core
 
 - npm i -S scatterjs-plugin-eosjs
+
+8. Scatter 세팅
+
+- npm i -D @babel/runtime
