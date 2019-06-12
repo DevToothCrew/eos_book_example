@@ -16,3 +16,13 @@ EOSJS 환경구성
 4. create-react-app 설치
 
 - sudo npm install -g create-react-app
+
+5. PC Scatter 설치
+
+- https://get-scatter.com
+
+6. Scatter.JS 설치
+
+- npm i -S scatterjs-core
+
+- npm i -S scatterjs-plugin-eosjs
